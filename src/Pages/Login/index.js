@@ -1,17 +1,23 @@
 import { Link } from "@react-navigation/native";
-import { View, TextInput, StyleSheet, Input} from "react-native";
+import { View, TextInput, StyleSheet, Text } from "react-native";
 
 
-export default function Login(){
-    return(
-        <SafeAreaView style={styles.container}>
+export default function Login() {
+    return (
+        <View style={styles.container}>
+
+            <Text style={styles.nome}>
+                Faça seu Login
+            </Text>
+
 
             <TextInput
                 style={styles.input}
                 label="Usuário"
                 variant="standard"
-                />
-        
+                placeholder="Usuário"
+            />
+
 
             <TextInput
                 style={styles.input}
@@ -20,12 +26,12 @@ export default function Login(){
             />
 
             <View>
-                <Link to={{screen: "Dashboard"}} style={styles.botao}>Dashboard</Link>
-                <Link to={{screen: "Registro"}} style={styles.botao}>Nao possui uma conta? Crie agora</Link>
+                <Link to={{ screen: "Dashboard" }} style={styles.botao}>Faça seu Login</Link>
+                <Link to={{ screen: "Registro" }} style={styles.botao}>Nao possui uma conta? Crie agora</Link>
             </View>
-            
-           
-        </SafeAreaView>
+
+
+        </View>
     )
 }
 
@@ -39,11 +45,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'papayawhip'
-    }, 
+    },
 
     input: {
         borderRadius: 5,
-        borderWidth: 1 ,
+        borderWidth: 1,
         borderColor: 'black',
         padding: 10,
         margin: 12
@@ -53,7 +59,16 @@ const styles = StyleSheet.create({
         padding: 10,
         backgroundColor: 'white',
         borderRadius: 10,
-        width: 300
+        width: 300,
+        margin: 10,
+        textAlign: 'center',
+        borderWidth: 1,
+        borderColor: 'black'
+    },
+
+    nome: {
+        fontSize: 30,
+        fontWeight: 'bold'
     }
 
 })

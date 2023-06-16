@@ -1,35 +1,43 @@
 import { Link } from "@react-navigation/native";
-import { View, Text, StyleSheet} from "react-native";
+import { View, TextInput, StyleSheet, Text } from "react-native";
 
-export default function Registro(){
-    return(
-        <SafeAreaView style={styles.container}>
-            
-                
-                <TextInput 
+export default function Registro() {
+    return (
+        <View style={styles.container}>
+
+            <Text style={styles.nome}>
+                Registre-se
+            </Text>
+
+
+            <TextInput
                 style={styles.input}
                 label="Usuário"
                 variant="standard"
-                />
-        
-                <TextInput
+                placeholder="Usuário"
+            />
+
+            <TextInput
                 style={styles.input}
                 secureTextEntry={true}
                 label="Senha"
                 variant="standard"
-                />
-                    
-                <TextInput
+                placeholder="Senha"
+            />
+
+            <TextInput
                 style={styles.input}
                 label="Email"
                 variant="standard"
-                />
-                <View>
-                    <Link to={{screen: "Login"}} style={styles.botao}>Realizar Cadastro</Link>
-                </View>
-            
-            
-        </SafeAreaView>
+                placeholder="Email"
+            />
+
+            <View>
+                <Link to={{ screen: "Login" }} style={styles.botao}>Realizar Cadastro</Link>
+            </View>
+
+
+        </View>
     )
 }
 
@@ -44,21 +52,30 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'papayawhip'
-    }, 
-   
+    },
+
     botao: {
         padding: 10,
         backgroundColor: 'white',
         borderRadius: 10,
-        width: 300
+        width: 300,
+        marginBottom: 30,
+        textAlign: 'center',
+        borderWidth: 1,
+        borderColor: 'black'
     },
 
     input: {
         borderRadius: 5,
-        borderWidth: 1 ,
+        borderWidth: 1,
         borderColor: 'black',
-        backgroundColor: 'papayawhip',
-        padding: '10',
+        padding: 10,
         margin: 12
     },
+
+    nome: {
+        fontSize: 40,
+        fontWeight: 'bold'
+
+    }
 })
