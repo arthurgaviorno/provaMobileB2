@@ -4,12 +4,12 @@ import { View, TextInput, StyleSheet, Input} from "react-native";
 
 export default function Login(){
     return(
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
 
-            <View>
-            <label style ={styles.caixa}> 
-                Login: <input  style={styles.input} name = "login"></input>
-            </label>
+            <TextInput
+            style={styles.input}
+            placeholder="Login"
+            />
 
             <TextInput
             style={styles.input}
@@ -17,13 +17,13 @@ export default function Login(){
             placeholder="Senha"
             />
 
-                  <View>
-                    <Link to={{screen: "Dashboard"}} style={styles.confirmar}>Dashboard</Link>
-                    <Link to={{screen: "Registro"}} style={styles.consertar}>Quer se Registrar?</Link>
-                </View>
-            
+            <View>
+                <Link to={{screen: "Dashboard"}} style={styles.confirmar}>Dashboard</Link>
+                <Link to={{screen: "Registro"}} style={styles.consertar}>Quer se Registrar?</Link>
             </View>
-        </View>
+            
+           
+        </SafeAreaView>
     )
 }
 
@@ -36,38 +36,17 @@ const styles = StyleSheet.create({
         margin: 3,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#ADD8E6'
+        backgroundColor: 'papayawhip'
     }, 
-    informacao: {
-        width: '120%',
-        backgroundColor: 'white',
-        padding: 10,
-        color: 'black',
-        borderWidth: 3,
-        borderColor: 'black',
-        borderRadius: 10,
-        marginBottom: 10,
-        textAlign: 'center'
-    },
-    confirmar: {
-        width: '120%',
-        backgroundColor: 'green',
-        padding: 10,
-        color: 'black',
-        borderWidth: 3,
-        borderColor: 'black',
-        borderRadius: 10,
-        marginBottom: 10,
-        textAlign: 'center'
-    },
+
+    
 
     input: {
         borderRadius: 5,
-        borderWidth: '1px' ,
-        borderColor: 'black'
+        borderWidth: 1 ,
+        borderColor: 'black',
+        padding: '10',
+        margin: 12
     },
 
-    caixa: {
-        margin: 10,
-    }
 })
