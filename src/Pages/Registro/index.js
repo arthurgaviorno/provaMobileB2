@@ -8,7 +8,7 @@ export default function Registro(){
                 
                 <TextInput 
                 style={styles.input}
-                label="Login"
+                label="Usuário"
                 variant="standard"
                 />
         
