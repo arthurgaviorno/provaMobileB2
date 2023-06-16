@@ -47,14 +47,10 @@ const styles = StyleSheet.create({
     }, 
    
     botao: {
-        width: 300,
-        backgroundColor: 'green',
         padding: 10,
-        borderWidth: 3,
-        borderColor: 'black',
+        backgroundColor: 'white',
         borderRadius: 10,
-        marginBottom: 10,
-        textAlign: 'center'
+        width: 300
     },
 
     input: {
