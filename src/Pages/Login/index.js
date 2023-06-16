@@ -7,19 +7,21 @@ export default function Login(){
         <SafeAreaView style={styles.container}>
 
             <TextInput
-            style={styles.input}
-            placeholder="Login"
-            />
+                style={styles.input}
+                label="Usuário"
+                variant="standard"
+                />
+        
 
             <TextInput
-            style={styles.input}
-            secureTextEntry={true}
-            placeholder="Senha"
+                style={styles.input}
+                secureTextEntry={true}
+                placeholder="Senha"
             />
 
             <View>
-                <Link to={{screen: "Dashboard"}} style={styles.confirmar}>Dashboard</Link>
-                <Link to={{screen: "Registro"}} style={styles.consertar}>Quer se Registrar?</Link>
+                <Link to={{screen: "Dashboard"}} style={styles.botao}>Dashboard</Link>
+                <Link to={{screen: "Registro"}} style={styles.botao}>Nao possui uma conta? Crie agora</Link>
             </View>
             
            
@@ -39,14 +41,19 @@ const styles = StyleSheet.create({
         backgroundColor: 'papayawhip'
     }, 
 
-    
-
     input: {
         borderRadius: 5,
         borderWidth: 1 ,
         borderColor: 'black',
-        padding: '10',
+        padding: 10,
         margin: 12
     },
+
+    botao: {
+        padding: 10,
+        backgroundColor: 'white',
+        borderRadius: 10,
+        width: 300
+    }
 
 })
