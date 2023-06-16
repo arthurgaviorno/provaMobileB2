@@ -3,24 +3,33 @@ import { View, Text, StyleSheet} from "react-native";
 
 export default function Registro(){
     return(
-        <View style={styles.container}>
-            <View>
-                <Text></Text>
-                <Text style={styles.informacao}>
-                    Nome do Usuário
-                </Text>
-                <Text style={styles.informacao}>
-                    Senha
-                </Text>
-                <Text style={styles.informacao}>
-                    Email
-                </Text>
+        <SafeAreaView style={styles.container}>
+            
+                
+                <TextInput 
+                style={styles.input}
+                label="Login"
+                variant="standard"
+                />
+        
+                <TextInput
+                style={styles.input}
+                secureTextEntry={true}
+                label="Senha"
+                variant="standard"
+                />
+                    
+                <TextInput
+                style={styles.input}
+                label="Email"
+                variant="standard"
+                />
                 <View>
-                    <Link to={{screen: "Login"}} style={styles.confirmar}>Realizar Cadastro</Link>
+                    <Link to={{screen: "Login"}} style={styles.botao}>Realizar Cadastro</Link>
                 </View>
             
-            </View>
-        </View>
+            
+        </SafeAreaView>
     )
 }
 
@@ -34,24 +43,13 @@ const styles = StyleSheet.create({
         margin: 3,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#ADD8E6'
+        backgroundColor: 'papayawhip'
     }, 
-    informacao: {
-        width: '120%',
-        backgroundColor: 'white',
-        padding: 10,
-        color: 'black',
-        borderWidth: 3,
-        borderColor: 'black',
-        borderRadius: 10,
-        marginBottom: 10,
-        textAlign: 'center'
-    },
-    confirmar: {
-        width: '120%',
+   
+    botao: {
+        width: 300,
         backgroundColor: 'green',
         padding: 10,
-        color: 'black',
         borderWidth: 3,
         borderColor: 'black',
         borderRadius: 10,
@@ -59,5 +57,12 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
 
-        
+    input: {
+        borderRadius: 5,
+        borderWidth: 1 ,
+        borderColor: 'black',
+        backgroundColor: 'papayawhip',
+        padding: '10',
+        margin: 12
+    },
 })
